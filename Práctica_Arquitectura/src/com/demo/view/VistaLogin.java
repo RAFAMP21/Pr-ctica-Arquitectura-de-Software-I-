@@ -11,6 +11,7 @@ public class VistaLogin extends javax.swing.JFrame {
     public VistaLogin() {
         
         initComponents();
+        this.setLocation(400, 200);
         cLogin = new ControllerLogin();
     }
 
@@ -31,15 +32,21 @@ public class VistaLogin extends javax.swing.JFrame {
         jbtnLogUp = new javax.swing.JButton();
         jbtnRecuperar = new javax.swing.JButton();
         pwp_clave = new javax.swing.JPasswordField();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText(" DEMO LOGIN");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/icono_b.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 140, -1));
 
         jLabel2.setText("USUARIO");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 65, -1));
 
         jLabel3.setText("CLAVE");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, -1, -1));
+        getContentPane().add(jtxtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 115, -1));
 
         jbtnLogIn.setText("Log In");
         jbtnLogIn.addActionListener(new java.awt.event.ActionListener() {
@@ -47,6 +54,7 @@ public class VistaLogin extends javax.swing.JFrame {
                 jbtnLogInActionPerformed(evt);
             }
         });
+        getContentPane().add(jbtnLogIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 90, -1));
 
         jbtnLogUp.setText("Log Up");
         jbtnLogUp.addActionListener(new java.awt.event.ActionListener() {
@@ -54,6 +62,7 @@ public class VistaLogin extends javax.swing.JFrame {
                 jbtnLogUpActionPerformed(evt);
             }
         });
+        getContentPane().add(jbtnLogUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 90, -1));
 
         jbtnRecuperar.setText("Recuperar Clave");
         jbtnRecuperar.addActionListener(new java.awt.event.ActionListener() {
@@ -61,61 +70,17 @@ public class VistaLogin extends javax.swing.JFrame {
                 jbtnRecuperarActionPerformed(evt);
             }
         });
+        getContentPane().add(jbtnRecuperar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, -1, -1));
 
         pwp_clave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pwp_claveActionPerformed(evt);
             }
         });
+        getContentPane().add(pwp_clave, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 115, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(181, 181, 181)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jtxtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(pwp_clave)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jbtnLogIn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jbtnLogUp, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)))
-                        .addGap(18, 18, 18)
-                        .addComponent(jbtnRecuperar)))
-                .addContainerGap(28, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jtxtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(pwp_clave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbtnLogIn)
-                    .addComponent(jbtnLogUp)
-                    .addComponent(jbtnRecuperar))
-                .addContainerGap(25, Short.MAX_VALUE))
-        );
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/fondoL.png"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 0, 360, 330));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -186,6 +151,7 @@ public class VistaLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JButton jbtnLogIn;
     private javax.swing.JButton jbtnLogUp;
     private javax.swing.JButton jbtnRecuperar;
